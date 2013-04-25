@@ -1,0 +1,12 @@
+.well {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.well h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  margin-bottom: 30px;
+}

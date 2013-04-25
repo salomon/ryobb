@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="well">
+    <h1>ryobb</h1>
+
+    <form action="/urls" method="post" class="form-inline">
+      <input type="text" name="url" placeholder="Enter url" class="input-medium">
+      <button type="submit" class="btn btn-success">ryobb it!</button
+    </form>
+    <% if @url.try(:valid?) %>
+      <h3><%=  @url.url %></h3>
+      <p>Short Link: <a href="/<%= @url.short_url %>">ryobb.com/<%= @url.short_url %></a></p>
+      <p>Click Count: <%= @url.click_count %></p>
+    <% end %>
+
+    <% if @url && @url.errors.any? %>
+      <% @url.errors.full_messages.each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
